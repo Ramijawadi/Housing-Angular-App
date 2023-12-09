@@ -1,0 +1,21 @@
+
+
+<div>
+
+    <!-- search part  -->
+<section>
+    <form>
+     <input type="text" placeholder="filter city ..." />
+     <button class="primary" type="button">Search</button>
+    </form>
+   </section>
+
+   
+  <!-- parcourir la table housingLocation     -->
+
+
+</div>
+<section class="results">
+<housing-location  *ngFor="let housingLocation of housingLocationList" 
+[housingLocation]="housingLocation"></housing-location>
+</section>
