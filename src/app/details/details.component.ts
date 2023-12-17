@@ -13,6 +13,7 @@ import { FormGroup , FormControl , ReactiveFormsModule } from '@angular/forms';
    styleUrl: './details.component.css'
 })
 export class DetailsComponent {
+
 // injection des routes active
 route: ActivatedRoute = inject(ActivatedRoute);
 housingLocationId = -1;
@@ -31,7 +32,10 @@ constructor(){
   /* recuperer le id */
   const  housingLocationId = Number(this.route.snapshot.params['id']);
   /* ajouter le id dans le URL*/ 
-  this.housingLocation = this.housingService.getHousingLocatioById(housingLocationId);
+ this.housingService.getHousingLocatioById(housingLocationId).then(housingLocation  => {
+this.housingLocation = housingLocation ;
+
+ });
 }
 
 submitApplication(){
@@ -41,7 +45,9 @@ submitApplication(){
     this.applyForm.value.lastName ?? '',
     this.applyForm.value.email ?? '',
   )
-
+  window.alert('Form submitted successfully!');
 }
+
+
 
 }

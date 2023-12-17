@@ -4,7 +4,7 @@
 
 .main {
 
-  margin: 20px;
+  margin: 44px;
 }
 
 .listing-photo {
@@ -17,7 +17,7 @@
 }
 
 .listing-heading {
-  font-size: 30pt;
+  font-size: 20pt;
   font-weight: bold;
   margin-bottom: 15px;
   color: rgb(53, 65, 239);
@@ -53,6 +53,7 @@ li {
 .listing-apply .section-heading {
   font-size: 18pt;
   margin-bottom: 15px;
+ 
 }
 
 label, input {

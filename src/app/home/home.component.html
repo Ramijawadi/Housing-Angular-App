@@ -5,8 +5,8 @@
     <!-- search part  -->
 <section>
     <form>
-     <input type="text" placeholder="filter city ..." />
-     <button class="primary" type="button">Search</button>
+     <input type="text" placeholder="filter city ..."  #filter/>
+     <button class="primary" type="button" (click)="filteredResults(filter.value)">Search</button>
     </form>
    </section>
 
@@ -16,6 +16,6 @@
 
 </div>
 <section class="results">
-<housing-location  *ngFor="let housingLocation of housingLocationList" 
+<housing-location  *ngFor="let housingLocation of filteredLocationList" 
 [housingLocation]="housingLocation"></housing-location>
 </section>
